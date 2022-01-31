@@ -1,1 +1,1 @@
-# adventOfCode
+# coding exercise
