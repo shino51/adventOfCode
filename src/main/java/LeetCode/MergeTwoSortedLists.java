@@ -1,5 +1,7 @@
 package LeetCode;
 
+import LeetCode.Utils.ListNode;
+
 public class MergeTwoSortedLists {
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
     if (list1 == null && list2 == null) {
@@ -24,14 +26,4 @@ public class MergeTwoSortedLists {
     }
     return input;
   }
-}
-
-
-// Definition for singly-linked list.
-class ListNode {
-  int val;
-  ListNode next;
-  ListNode() {}
-  ListNode(int val) { this.val = val; }
-  ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

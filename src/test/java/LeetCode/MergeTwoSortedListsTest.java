@@ -1,12 +1,13 @@
 package LeetCode;
 
+import LeetCode.Utils.ListNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
 
 public class MergeTwoSortedListsTest {
-  private MergeTwoSortedLists classUnderTest = new MergeTwoSortedLists();
+  private final MergeTwoSortedLists classUnderTest = new MergeTwoSortedLists();
 
   @Test
   public void test1() {
