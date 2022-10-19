@@ -8,7 +8,7 @@ import java.util.List;
 public class BinaryTree {
   public List<Integer> postorderTraversal(TreeNode root) {
     List<Integer> result = new ArrayList<>();
-    if (root.val == null) {
+    if (root == null) {
       return result;
     }
 

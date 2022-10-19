@@ -25,7 +25,7 @@ public class BinaryTreeFindSecondSmaller {
     }
 
     // if it is still the same as minimum value, go to next recursion
-    if (parent.val.equals(minValue)) {
+    if (parent.val == minValue) {
       secondMinValue = findValue(parent.left, minValue, secondMinValue);
       secondMinValue = findValue(parent.right, minValue, secondMinValue);
       return secondMinValue;

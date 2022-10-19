@@ -11,11 +11,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BinaryTreeTest {
 
-  private BinaryTree binaryTree = new BinaryTree();
+  private final BinaryTree binaryTree = new BinaryTree();
 
   @Test
   public void nullNode() {
-    TreeNode root = new TreeNode(null);
+    TreeNode root = null;
     List<Integer> result = binaryTree.postorderTraversal(root);
     assertThat(result.toString(), is("[]"));
   }
