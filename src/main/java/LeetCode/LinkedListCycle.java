@@ -11,7 +11,7 @@ public class LinkedListCycle {
     return checkCycle(head, list);
   }
 
-  public boolean checkCycle(ListNode currentNode,List<ListNode> list) {
+  public boolean checkCycle(ListNode currentNode, List<ListNode> list) {
     if (currentNode == null) {
       return false;
     } else if (list.contains(currentNode)) {

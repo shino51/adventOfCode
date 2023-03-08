@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.*;
  * Note: when you run this from the debug mode, you will get stackOverflow exception. Please update ListNode class for the debugger to execute
  */
 public class LinkedListCycleTest {
-  
+
   private final LinkedListCycle classUnderTest = new LinkedListCycle();
 
   @Test
