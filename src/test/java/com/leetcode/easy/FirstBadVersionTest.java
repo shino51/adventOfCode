@@ -1,35 +1,21 @@
 package com.leetcode.easy;
 
-import com.leetcode.easy.FirstBadVersion;
-import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class FirstBadVersionTest {
+class FirstBadVersionTest {
 
   private final FirstBadVersion classUnderTest = new FirstBadVersion();
 
-  @Test
-  public void test1() {
-    int n = 5;
-    int bad = 4;
-
-    assertThat(classUnderTest.solution(n, bad)).isTrue();
-  }
-
-  @Test
-  public void testEven() {
-    int n = 6;
-    int bad = 4;
-
-    assertThat(classUnderTest.solution(n, bad)).isTrue();
-  }
-
-  @Test
-  public void testOnlyOneInput() {
-    int n = 1;
-    int bad = 1;
-
+  @ParameterizedTest
+  @CsvSource({
+    "5, 4",
+    "6 , 4",
+    "1, 1"
+  })
+  void test(int n, int bad) {
     assertThat(classUnderTest.solution(n, bad)).isTrue();
   }
 }

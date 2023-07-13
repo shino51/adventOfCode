@@ -1,6 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

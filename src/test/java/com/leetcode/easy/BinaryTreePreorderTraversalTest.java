@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.BinaryTreePreorderTraversal;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class BinaryTreePreorderTraversalTest {
   public void testWithNullNode() {
     List<Integer> result = classUnderTest.preorderTraversal(null);
 
-    assertThat(result).hasSize(0);
+    assertThat(result).isEmpty();
   }
 
   @Test

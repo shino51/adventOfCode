@@ -23,7 +23,7 @@ public class PlusOneTest {
     int[] input = new int[]{9};
     int[] output = classUnderTest.plusOne(input);
     assertThat(output[0]).isEqualTo(1);
-    assertThat(output[1]).isEqualTo(0);
+    assertThat(output[1]).isZero();
   }
 
   @Test
@@ -31,9 +31,9 @@ public class PlusOneTest {
     int[] input = new int[]{9,9,9};
     int[] output = classUnderTest.plusOne(input);
     assertThat(output[0]).isEqualTo(1);
-    assertThat(output[1]).isEqualTo(0);
-    assertThat(output[2]).isEqualTo(0);
-    assertThat(output[3]).isEqualTo(0);
+    assertThat(output[1]).isZero();
+    assertThat(output[2]).isZero();
+    assertThat(output[3]).isZero();
   }
 
   @Test

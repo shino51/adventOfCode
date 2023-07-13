@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.ConvertSortedArrayToBinarySearchTree;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,7 +13,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
   public void test1() {
     int[] input = {-10, -3, 0, 5, 9};
     TreeNode resultRoot = classUnderTest.sortedArrayToBST(input);
-    assertThat(resultRoot.val).isEqualTo(0);
+    assertThat(resultRoot.val).isZero();
     assertThat(resultRoot.left).isNotNull();
     assertThat(resultRoot.left.val).matches(value -> value == -3 || value == -10);
   }
@@ -32,7 +31,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
     int[] input = {0, 1, 2, 3};
     TreeNode resultRoot = classUnderTest.sortedArrayToBST(input);
     assertThat(resultRoot.val).isEqualTo(1);
-    assertThat(resultRoot.left.val).isEqualTo(0);
+    assertThat(resultRoot.left.val).isZero();
     assertThat(resultRoot.right.val).isEqualTo(2);
   }
 
@@ -44,7 +43,7 @@ public class ConvertSortedArrayToBinarySearchTreeTest {
     assertThat(resultRoot.left).isNotNull();
     assertThat(resultRoot.left.val).isEqualTo(1);
     assertThat(resultRoot.right.val).isEqualTo(5);
-    assertThat(resultRoot.left.left.val).isEqualTo(0);
+    assertThat(resultRoot.left.left.val).isZero();
     assertThat(resultRoot.left.right.val).isEqualTo(2);
     assertThat(resultRoot.right.left.val).isEqualTo(4);
   }

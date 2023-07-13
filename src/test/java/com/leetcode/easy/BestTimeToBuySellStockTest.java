@@ -18,6 +18,6 @@ public class BestTimeToBuySellStockTest {
   @Test
   public void testNoProfit() {
     int[] prices = new int[]{7,6,4,3,1};
-    assertThat(classUnderTest.maxProfit(prices)).isEqualTo(0);
+    assertThat(classUnderTest.maxProfit(prices)).isZero();
   }
 }

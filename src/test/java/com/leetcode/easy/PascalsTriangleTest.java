@@ -1,37 +1,25 @@
 package com.leetcode.easy;
 
-import com.leetcode.easy.PascalsTriangle;
-import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class PascalsTriangleTest {
+class PascalsTriangleTest {
 
   private final PascalsTriangle classUnderTest = new PascalsTriangle();
 
-  @Test
-  public void row1() {
-    List<List<Integer>> result = classUnderTest.generate(1);
-    assertThat(result.toString()).isEqualTo("[[1]]");
-  }
-
-  @Test
-  public void row2() {
-    List<List<Integer>> result = classUnderTest.generate(2);
-    assertThat(result.toString()).isEqualTo("[[1], [1, 1]]");
-  }
-
-  @Test
-  public void row3() {
-    List<List<Integer>> result = classUnderTest.generate(3);
-    assertThat(result.toString()).isEqualTo("[[1], [1, 1], [1, 2, 1]]");
-  }
-
-  @Test
-  public void row5() {
-    List<List<Integer>> result = classUnderTest.generate(5);
-    assertThat(result.toString()).isEqualTo("[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]");
+  @ParameterizedTest
+  @CsvSource({
+    "1, '[[1]]'",
+    "2, '[[1], [1, 1]]'",
+    "3, '[[1], [1, 1], [1, 2, 1]]'",
+    "5, '[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]'"
+  })
+  void test(int input, String expected) {
+    List<List<Integer>> result = classUnderTest.generate(input);
+    assertThat(result).hasToString(expected);
   }
 }

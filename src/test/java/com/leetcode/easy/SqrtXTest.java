@@ -14,7 +14,7 @@ public class SqrtXTest {
     assertThat(classUnderTest.mySqrt(4)).isEqualTo(2);
     assertThat(classUnderTest.mySqrt(8)).isEqualTo(2);
     assertThat(classUnderTest.mySqrt(2)).isEqualTo(1);
-    assertThat(classUnderTest.mySqrt(0)).isEqualTo(0);
+    assertThat(classUnderTest.mySqrt(0)).isZero();
     assertThat(classUnderTest.mySqrt(5)).isEqualTo(2);
   }
 }

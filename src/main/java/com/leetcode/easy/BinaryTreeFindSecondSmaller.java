@@ -1,6 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 import static java.lang.Math.min;
 

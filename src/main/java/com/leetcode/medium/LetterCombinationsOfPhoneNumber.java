@@ -25,7 +25,7 @@ public class LetterCombinationsOfPhoneNumber {
 
   private List<String> combine(List<String> list, String letters) {
     List<String> result = new ArrayList<>();
-    boolean isFirstIteration = list.size() <= 0;
+    boolean isFirstIteration = list.isEmpty();
     for (char letter : letters.toCharArray()) {
       if (isFirstIteration) {
         result.add(String.valueOf(letter));

@@ -1,8 +1,7 @@
 package com.leetcode.easy;
 
 import com.leetcode.TestUtils.ListNodeCreator;
-import com.leetcode.Utils.ListNode;
-import com.leetcode.easy.RemoveDuplicatesFromSortedList;
+import com.leetcode.utils.ListNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;

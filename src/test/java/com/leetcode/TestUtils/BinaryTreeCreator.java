@@ -1,6 +1,6 @@
 package com.leetcode.TestUtils;
 
-import com.leetcode.Utils.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 public class BinaryTreeCreator {
   // create tree node

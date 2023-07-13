@@ -9,7 +9,7 @@ public class ClimbingStairsTest {
 
   @Test
   public void test1() {
-    assertThat(classUnderTest.climbStairs(0)).isEqualTo(0);
+    assertThat(classUnderTest.climbStairs(0)).isZero();
     assertThat(classUnderTest.climbStairs(1)).isEqualTo(1);
     assertThat(classUnderTest.climbStairs(2)).isEqualTo(2);
     assertThat(classUnderTest.climbStairs(3)).isEqualTo(3);

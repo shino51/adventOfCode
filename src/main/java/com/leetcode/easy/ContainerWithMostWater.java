@@ -18,11 +18,4 @@ public class ContainerWithMostWater {
     }
     return maxArea;
   }
-
-//  public int getHighestHight(int[] height) {
-//    int highest = 0;
-//    for (int i = 0; i < height.length; i++) {
-//
-//    }
-//  }
 }

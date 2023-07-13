@@ -1,6 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 public class ConvertSortedArrayToBinarySearchTree {
 

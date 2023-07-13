@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.MinimumDepthOfBinaryTree;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
@@ -26,8 +25,6 @@ public class MinimumDepthOfBinaryTreeTest {
 
   @Test
   public void whenInputIsNull() {
-    TreeNode root = null;
-    assertThat(classUnderTest.minDepth(root)).isEqualTo(0);
-
+    assertThat(classUnderTest.minDepth(null)).isZero();
   }
 }

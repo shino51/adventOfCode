@@ -33,8 +33,8 @@ public class RemoveElementTest {
 
     int[] sortedNum = sortForAnswer(nums, finalLength);
     // nums = [0,0,1,3,4]
-    assertThat(sortedNum[0]).isEqualTo(0);
-    assertThat(sortedNum[1]).isEqualTo(0);
+    assertThat(sortedNum[0]).isZero();
+    assertThat(sortedNum[1]).isZero();
     assertThat(sortedNum[2]).isEqualTo(1);
     assertThat(sortedNum[3]).isEqualTo(3);
     assertThat(sortedNum[4]).isEqualTo(4);

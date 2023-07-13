@@ -1,7 +1,6 @@
 package com.leetcode.medium;
 
-import com.leetcode.Utils.ListNode;
-import com.leetcode.medium.AddTwoNumbers;
+import com.leetcode.utils.ListNode;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertNull;

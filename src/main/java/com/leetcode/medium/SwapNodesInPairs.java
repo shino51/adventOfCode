@@ -1,6 +1,6 @@
 package com.leetcode.medium;
 
-import com.leetcode.Utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 public class SwapNodesInPairs {
 

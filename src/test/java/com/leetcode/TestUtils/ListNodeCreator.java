@@ -1,6 +1,6 @@
 package com.leetcode.TestUtils;
 
-import com.leetcode.Utils.ListNode;
+import com.leetcode.utils.ListNode;
 
 public class ListNodeCreator {
 

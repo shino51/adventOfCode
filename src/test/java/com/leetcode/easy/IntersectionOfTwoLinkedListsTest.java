@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.ListNode;
-import com.leetcode.easy.IntersectionOfTwoLinkedLists;
+import com.leetcode.utils.ListNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;

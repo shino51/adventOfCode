@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.InorderTraversal;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import java.util.List;
@@ -35,8 +34,7 @@ public class InorderTraversalTest {
     TreeNode root = null;
     List<Integer> result = classUnderTest.inorderTraversal(root);
 
-    assertThat(result).isNotNull();
-    assertThat(result.size()).isEqualTo(0);
+    assertThat(result).isNotNull().isEmpty();
   }
 
   @Test

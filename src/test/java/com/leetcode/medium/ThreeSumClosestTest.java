@@ -42,6 +42,6 @@ public class ThreeSumClosestTest {
     int target = 1;
     int result = threeSumClosest.threeSumClosest(input, target);
 
-    assertThat(result).isEqualTo(0);
+    assertThat(result).isZero();
   }
 }

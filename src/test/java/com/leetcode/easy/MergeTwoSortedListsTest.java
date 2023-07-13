@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.ListNode;
-import com.leetcode.easy.MergeTwoSortedLists;
+import com.leetcode.utils.ListNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
@@ -37,7 +36,7 @@ public class MergeTwoSortedListsTest {
     ListNode input1 = null;
     ListNode input2 = new ListNode(0);
     ListNode output = classUnderTest.mergeTwoLists(input1, input2);
-    assertThat(output.val).isEqualTo(0);
+    assertThat(output.val).isZero();
     assertThat(output.next).isNull();
   }
 

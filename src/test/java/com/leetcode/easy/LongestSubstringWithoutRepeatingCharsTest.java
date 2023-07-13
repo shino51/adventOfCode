@@ -30,7 +30,7 @@ public class LongestSubstringWithoutRepeatingCharsTest {
   @Test
   public void whenStringIsEmpty() {
     String input = "";
-    assertThat(classUnderTest.lengthOfLongestSubstring(input)).isEqualTo(0);
+    assertThat(classUnderTest.lengthOfLongestSubstring(input)).isZero();
   }
 
   @Test

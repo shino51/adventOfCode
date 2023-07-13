@@ -26,7 +26,7 @@ public class FindPivotIndexTest {
   public void whenIndex0() {
     int[] input = {2,1,-1};
     int output = classUnderTest.pivotIndex(input);
-    assertThat(output).isEqualTo(0);
+    assertThat(output).isZero();
   }
 
   @Test

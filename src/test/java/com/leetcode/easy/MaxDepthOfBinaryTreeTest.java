@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.MaxDepthOfBinaryTree;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
@@ -13,7 +12,7 @@ public class MaxDepthOfBinaryTreeTest {
   @Test
   public void rootIsNull() {
     int depth = classUnderTest.maxDepth(null);
-    assertThat(depth).isEqualTo(0);
+    assertThat(depth).isZero();
   }
 
   @Test

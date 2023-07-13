@@ -1,8 +1,7 @@
 package com.leetcode.easy;
 
 import com.leetcode.TestUtils.BinaryTreeCreator;
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.BinaryTree;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import java.util.List;

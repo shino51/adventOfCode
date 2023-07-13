@@ -1,7 +1,6 @@
 package com.leetcode.easy;
 
-import com.leetcode.Utils.TreeNode;
-import com.leetcode.easy.SameTree;
+import com.leetcode.utils.TreeNode;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;

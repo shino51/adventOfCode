@@ -12,9 +12,7 @@ public class ClimbingStairs {
   private final Map<Integer, Integer> steps = new HashMap<>(Map.of(0, 0, 1, 1, 2, 2, 3, 3));
 
   public int climbStairs(int n) {
-    if (!steps.containsKey(n)) {
-      steps.put(n, climbStairs(n - 1) + climbStairs(n - 2));
-    }
+    steps.computeIfAbsent(n, k -> climbStairs(k - 1) + climbStairs(k - 2));
     return steps.get(n);
   }
 }

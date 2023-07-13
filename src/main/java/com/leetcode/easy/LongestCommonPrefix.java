@@ -4,7 +4,7 @@ public class LongestCommonPrefix {
   public String longestCommonPrefix(String[] strs) {
     StringBuilder possiblePrefix = new StringBuilder(strs[0]);
     for(String oneString: strs) {
-      if (oneString == strs[0]) {
+      if (oneString.equals(strs[0])) {
         continue;
       }
       StringBuilder temp = new StringBuilder();

@@ -1,6 +1,5 @@
 package com.leetcode.medium;
 
-import com.leetcode.medium.LetterCombinationsOfPhoneNumber;
 import org.junit.Test;
 
 import java.util.List;
@@ -14,23 +13,25 @@ public class LetterCombinationsOfPhoneNumberTest {
   public void withSingleNumber() {
     String input = "2";
     List<String> result = classUnderTest.letterCombinations(input);
-    assertThat(result).hasSize(3);
-    assertThat(result).contains("a", "b", "c");
+    assertThat(result)
+      .hasSize(3)
+      .contains("a", "b", "c");
   }
 
   @Test
   public void withNoNumber() {
     String input = "";
     List<String> result = classUnderTest.letterCombinations(input);
-    assertThat(result).hasSize(0);
+    assertThat(result).isEmpty();
   }
 
   @Test
   public void withTwoNumber() {
     String input = "23";
     List<String> result = classUnderTest.letterCombinations(input);
-    assertThat(result).hasSize(9);
-    assertThat(result).contains("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
+    assertThat(result)
+      .hasSize(9)
+      .contains("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
   }
 
   @Test
