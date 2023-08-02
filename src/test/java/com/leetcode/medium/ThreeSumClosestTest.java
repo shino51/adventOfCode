@@ -1,6 +1,5 @@
 package com.leetcode.medium;
 
-import com.leetcode.medium.ThreeSumClosest;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
