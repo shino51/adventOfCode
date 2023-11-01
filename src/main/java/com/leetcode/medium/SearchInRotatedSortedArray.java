@@ -2,7 +2,6 @@ package com.leetcode.medium;
 
 public class SearchInRotatedSortedArray {
 
-
     public int search(int[] nums, int target) {
       return search(nums, 0, nums.length - 1, target);
     }
