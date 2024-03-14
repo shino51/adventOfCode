@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
  */
 public class NumArray {
 
-  private int[] nums;
+  private final int[] nums;
 
   public NumArray(int[] nums) {
     this.nums = nums;
