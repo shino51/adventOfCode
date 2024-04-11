@@ -4,19 +4,26 @@ public class NextPermutation {
 
   public void nextPermutation(int[] nums) {
     int lastIndex = nums.length - 1;
-    int nextNum = nums[lastIndex];
-    boolean foundNextPermutation = false;
+    int index = -1;
     for (int i = lastIndex - 1; i >= 0; i--) {
-      if (nextNum > nums[i]) {
-        // swapping happening
-        swap(nums, i, i+1);
-        foundNextPermutation = true;
+      if (nums[i + 1] > nums[i]) {
+        index = i;
         break;
       }
     }
-    if (!foundNextPermutation) {
-      reverse(nums);
+    if (index == -1) {
+      reverse(nums, 0, lastIndex);
+      return;
     }
+    int breakpoint = nums[index];
+    for (int i = lastIndex; i >= index; i--) {
+      if (nums[i] > breakpoint) {
+        swap(nums, i, index);
+        break;
+      }
+    }
+
+    reverse(nums, index + 1, lastIndex);
   }
 
   private void swap(int[] nums, int previous, int next) {
@@ -25,10 +32,15 @@ public class NextPermutation {
     nums[next] = temp;
   }
 
-  private void reverse(int[] nums) {
-    for (int left = 0, right = nums.length - 1; left < right; left++, right--) {
-      // swap the values at the left and right indices
-      swap(nums, left, right);
+  public void reverse(int[] arr, int l, int r) {
+    int start = l;
+    int end = r;
+    while (start < end) {
+      int temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start++;
+      end--;
     }
   }
 }

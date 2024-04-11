@@ -1,37 +1,31 @@
 package com.leetcode.medium;
 
-import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.assertj.core.api.Assertions.*;
+import java.util.stream.Stream;
 
-public class NextPermutationTest {
+import static org.assertj.core.api.Assertions.assertThat;
+
+class NextPermutationTest {
 
   private final NextPermutation nextPermutation = new NextPermutation();
 
-  @Test
-  public void from123To132() {
-    int[] input = new int[]{1,2,3};
-    int[] output = new int[]{1,3,2};
+  private static Stream<Arguments> provideArguments() {
+    return Stream.of(
+      Arguments.of(new int[]{1, 2, 3}, new int[]{1, 3, 2}),
+      Arguments.of(new int[]{1, 1, 5}, new int[]{1, 5, 1}),
+      Arguments.of(new int[]{3, 2, 1}, new int[]{1, 2, 3}),
+      Arguments.of(new int[]{1, 3, 2}, new int[]{2, 1, 3})
 
-    nextPermutation.nextPermutation(input);
-    assertThat(input).containsExactly(output);
+    );
   }
 
-  @Test
-  public void from132To213() {
-    int[] input = new int[]{1,3,2};
-    int[] output = new int[]{2,1,3};
-
+  @ParameterizedTest(name = "[{index}]: input: {0} - expect: {1}")
+  @MethodSource("provideArguments")
+  void testNextPermutation(int[] input, int[] expected) {
     nextPermutation.nextPermutation(input);
-    assertThat(input).containsExactly(output);
-  }
-
-  @Test
-  public void whenNumberAtLexicographicalLarge() {
-    int[] input = new int[]{3,2,1};
-    int[] output = new int[]{1,2,3};
-
-    nextPermutation.nextPermutation(input);
-    assertThat(input).containsExactly(output);
+    assertThat(input).containsExactly(expected);
   }
 }
