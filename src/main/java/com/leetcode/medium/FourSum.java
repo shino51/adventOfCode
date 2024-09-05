@@ -2,54 +2,51 @@ package com.leetcode.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class FourSum {
   public List<List<Integer>> fourSum(int[] nums, int target) {
     List<List<Integer>> result = new ArrayList<>();
     Arrays.sort(nums);
-    int numsLength = nums.length;
-    for (int i = 0; i < numsLength - 3; i++) {
-      if (i > 0 && nums[i] == nums[i - 1]) {
-        continue;
-      }
-      for (int j = i + 1; j < numsLength - 2; j++) {
-        int sumOfTwo = nums[i] + nums[j];
-        if (sumOfTwo >= target) {
-          return result;
-        }
-        if (j > i + 1 && nums[j] == nums[j - 1]) {
-          continue;
-        }
-        for (int k = j + 1; k < numsLength - 1; k++) {
-          int sumOfThree = nums[k] + sumOfTwo;
-          if (sumOfThree >= target || (k > j + 1 && nums[k] == nums[k - 1])) {
-            continue;
-          }
-          for (int l = k + 1; l < numsLength; l++) {
-            if (l > k + 1 && nums[l] == nums[l - 1]) {
-              continue;
-            }
-            int sum = sumOfThree + nums[l];
-            if (sum == target) {
-              List<Integer> combination = Arrays.asList(nums[i], nums[j], nums[k], nums[l]);
-              combination.sort(Comparator.naturalOrder());
-              validateAndAddList(result, combination);
-            }
-          }
-        }
+    int lastIndex = nums.length - 1;
+    for (int firstIndex = lastIndex; firstIndex >= 3; firstIndex--) {
+      for (int secondIndex = firstIndex - 1; secondIndex >= 2; secondIndex--) {
+        long sum = (long) nums[firstIndex] + nums[secondIndex];
+        int thirdIndex = secondIndex - 1;
+        findFourthIndex(nums, target, result, sum, firstIndex, secondIndex, thirdIndex);
       }
     }
     return result;
   }
 
-  private void validateAndAddList(List<List<Integer>> result, List<Integer> combination) {
-    for (List<Integer> listOne : result) {
-      if (listOne.equals(combination)) {
-        return;
+  private void findFourthIndex(int[] nums, int target, List<List<Integer>> result, long sum, int firstIndex, int secondIndex, int thirdIndex) {
+    while (thirdIndex > 0) {
+      int fourthIndex = thirdIndex - 1;
+      long currentSum = sum;
+      int currentThirdNum = nums[thirdIndex];
+      currentSum += currentThirdNum;
+      boolean found = false;
+      while (fourthIndex >= 0 && !found) {
+        int currentFourthNum = nums[fourthIndex];
+        if (currentSum + currentFourthNum == target) {
+          found = true;
+          addNumsIntoList(nums, result, firstIndex, secondIndex, thirdIndex, fourthIndex);
+        }
+        fourthIndex--;
       }
+      thirdIndex--;
     }
-    result.add(combination);
+  }
+
+  private void addNumsIntoList(int[] nums, List<List<Integer>> result, int i, int j, int thirdIndex, int fourthIndex) {
+    // combination found
+    List<Integer> combination = new ArrayList<>();
+    combination.add(nums[i]);
+    combination.add(nums[j]);
+    combination.add(nums[thirdIndex]);
+    combination.add(nums[fourthIndex]);
+    if (!result.contains(combination)) {
+      result.add(combination);
+    }
   }
 }

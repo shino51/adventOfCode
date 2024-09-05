@@ -56,10 +56,19 @@ public class FourSumTest {
   }
 
   @Test
-  public void test() {
+  public void when29CombinationsFound() {
     int[] nums = new int[]{-5,-4,-3,-2,-1,0,0,1,2,3,4,5};
     int target = 0;
     List<List<Integer>> result = classUnderTest.fourSum(nums, target);
     assertThat(result).hasSize(29);
+  }
+
+
+  @Test
+  public void whenTargetIsMinus294967296() {
+    int[] nums = new int[]{1000000000,1000000000,1000000000,1000000000};
+    int target = -294967296;
+    List<List<Integer>> result = classUnderTest.fourSum(nums, target);
+    assertThat(result).isEmpty();
   }
 }
